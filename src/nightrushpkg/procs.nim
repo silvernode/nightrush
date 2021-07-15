@@ -27,7 +27,7 @@ proc mk_employee*() =
 
 proc load_data_file*(employ: Employee): Employee=
     var employ = employ
-    if not existsFile(fmt"{employ.name}.txt"):
+    if not fileExists(fmt"{employ.name}.txt"):
 
         mk_employee()
 
